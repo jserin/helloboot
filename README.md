@@ -3,7 +3,8 @@
 - 스프링 컨테이너 만들기 전 코드 수정
 - 스프링 컨테이너 생성 및 빈 요청
 - 서비스 빈 생성 
-- Objects.requireNonNull(x) 파라미터가 null인지 확인하고 아닌 것만 실행
+- Objects.requireNonNull(x) 파라미터가 null인지 확인하고 아닌 것만 리턴
+- DI 정리
 
 ## 23-11-21
 - 서블릿 컨테이너 띄우고 서블릿 등록
