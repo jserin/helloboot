@@ -4,6 +4,13 @@
 - 컨트롤러에 생성자 파라미터로 주입. 변수로 저장
 - helloservice 타입을 빈으로 등록. 클래스 타입을 넣어서 등록해야함
 - dispatcherservlet으로 변경. 프론트 컨트롤러의 기능들을 하는 서블릿 클래스를 갖고 있음
+- 컨트롤러에 getmapping 어노테이션으로 매핑
+- RequestMapping(value = "", method = requestmethod.GET") 와 동일
+- restcontroller 어노테이션은 dispacherservlet과 관련이 별로 없음
+- 디스패처가 빈 중에서 웹 요청 매핑 되어 있는 클래스를 찾아서 요청 정보 추출하고 테이블을 만들어둠
+- 클래스 레벨에 RequestMapping 어노테이션을 붙여서 디스패처가 잘 찾게함
+- ResponseBody 어노테이션으로 뷰 대신 스트링 리턴 가능하게 함
+- RestController를 사용하면 Responsebody가 모든 메소드에 있음
 
 ## 23-11-22
 - 스프링 컨테이너 만들기 전 코드 수정
