@@ -24,6 +24,7 @@ public class HellobootApplication {
 		GenericApplicationContext applicationContext = new GenericApplicationContext();
 		// 오브젝트를 직접 만들 수 있지만 어떤 클래스를 이용해서 빈을 생성할 것인지 데이터를 넣어줌
 		applicationContext.registerBean(HelloController.class);
+		applicationContext.registerBean(SimpleHelloService.class);
 		// 컨네이터 초기화
 		applicationContext.refresh();
 
