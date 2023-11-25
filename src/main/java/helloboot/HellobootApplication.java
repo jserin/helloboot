@@ -1,5 +1,6 @@
 package helloboot;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.server.WebServer;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
@@ -23,26 +24,6 @@ public class HellobootApplication {
 	}
 
 	public static void main(String[] args) {
-		// 스프링 컨테이너 생성
-		AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext() {
-			@Override
-			protected void onRefresh() {
-				super.onRefresh();
-
-				ServletWebServerFactory serverFactory = this.getBean(ServletWebServerFactory.class);
-				DispatcherServlet dispatcherServlet = this.getBean(DispatcherServlet.class);
-
-				WebServer webServer = serverFactory.getWebServer(servletContext -> {
-					servletContext.addServlet("dispatcherServlet", dispatcherServlet)
-					.addMapping("/*");
-				});
-				webServer.start();
-			}
-		};
-		// 구성정보가 있는 클래스를 등록
-		applicationContext.register(HellobootApplication.class);
-		// 컨네이터 초기화
-		applicationContext.refresh();
+		SpringApplication.run(HellobootApplication.class, args);
 	}
-
 }
