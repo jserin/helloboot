@@ -2,6 +2,11 @@
 ## 23-11-28
 - 합성 어노테이션을 사용해서 myspringbootannotation 어노테이션 적용
 - config 파일로 팩토리 메소드 분리해서 스프링부트 초기 화면과 비슷하게 수정
+- config를 componentscan 대상에서 제외 시키도록 리패토링
+- import 어노테이션으로 config 구성정보 추가
+- config 분리하고 import 수정
+- enableautoconfiguration 어노테이션 생성하고 import 대체
+- 사용자 구성정보와 자동구성정보로 분리
 
 ## 23-11-26
 - 웹 요청 테스트 코드 작성 및 검증. 서버 켜두고 실행
