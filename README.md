@@ -3,6 +3,8 @@
 - 구성정보를 동적으로 추가할 수 있도록 MyAutoConfigImportSelector 추가
 - EnableMyAutoConfiguration 어노테이션 수정 안해도 되게 만듦
 - importselector에서 읽을 구성정보 파일을 외부 파일로 분리
+- @Configuration(proxyBeanMethods = false) default true
+- @Bean 메소드 직접 호출로 빈 의존관계 주입을 하지 않는다면 복잡한 프록시 생성을 굳이 할 필요가 없음
 
 ## 23-11-28
 - 합성 어노테이션을 사용해서 myspringbootannotation 어노테이션 적용
