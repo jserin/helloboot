@@ -1,4 +1,9 @@
 # helloboot
+## 23-11-29
+- 구성정보를 동적으로 추가할 수 있도록 MyAutoConfigImportSelector 추가
+- EnableMyAutoConfiguration 어노테이션 수정 안해도 되게 만듦
+- importselector에서 읽을 구성정보 파일을 외부 파일로 분리
+
 ## 23-11-28
 - 합성 어노테이션을 사용해서 myspringbootannotation 어노테이션 적용
 - config 파일로 팩토리 메소드 분리해서 스프링부트 초기 화면과 비슷하게 수정
